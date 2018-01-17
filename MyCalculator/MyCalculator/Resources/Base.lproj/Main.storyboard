@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Delegate object-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CalculatorController" customModule="MyCalculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ubz-tW-dCQ" customClass="BasisKeyboard" customModule="MyCalculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="217" width="375" height="450"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ubz-tW-dCQ" secondAttribute="height" multiplier="5:6" priority="750" id="ss5-Ev-tjC"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate_object" destination="BYZ-38-t0r" id="968-sa-tum"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6FN-ds-5xR" customClass="BasisDisplay" customModule="MyCalculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="30" width="375" height="177"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ubz-tW-dCQ" firstAttribute="height" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="2Rv-qg-Uhx"/>
+                            <constraint firstItem="6FN-ds-5xR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cwi-QB-mZY"/>
+                            <constraint firstItem="Ubz-tW-dCQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Fbt-zY-zF7"/>
+                            <constraint firstItem="Ubz-tW-dCQ" firstAttribute="top" secondItem="6FN-ds-5xR" secondAttribute="bottom" constant="10" id="ORl-XV-Ahy"/>
+                            <constraint firstItem="Ubz-tW-dCQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="P80-5R-22M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6FN-ds-5xR" secondAttribute="trailing" id="Uq2-Gl-mvv"/>
+                            <constraint firstItem="Ubz-tW-dCQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u6J-3j-V5v"/>
+                            <constraint firstItem="6FN-ds-5xR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ygb-J2-Umt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="display" destination="6FN-ds-5xR" id="O9x-bh-2n0"/>
+                        <outlet property="keyboard" destination="Ubz-tW-dCQ" id="OXO-UL-WfP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
