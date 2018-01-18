@@ -1,14 +1,14 @@
 //
-//  ActionButton.swift
+//  BasicKeyboard.swift
 //  MyCalculator
 //
-//  Created by Myron on 2018/1/16.
+//  Created by Myron on 2018/1/17.
 //  Copyright © 2018年 Myron. All rights reserved.
 //
 
 import UIKit
 
-class ActionButton: KeyButton {
+class BasicKeyboard: UIView {
 
     /*
     // Only override draw() if you perform custom drawing.
